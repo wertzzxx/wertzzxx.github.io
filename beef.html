@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <a href="index.html"> Go Back to Home Page</a><br>
+    <a href="beef.html"> BeEF Tutorial </a> <br>
+    <a href=medusa.html>Medusa Tutorial</a><br>
+    <a href=nmap.html> Nmap Tutorial</a><br>
+    <a href="proxychains.html">ProxyChains Tutorial</a>
+    <p class=alert> !!!USING THESE TOOLS WITHOUT PERMISSION IS ILLEGAL. IF YOU USE THEM, YOU CAN BE SENT TO JAIL IF YOU ARE CAUGHT!!! </p>
+    <h3> BeEf:</h3>
+    <img src="beef.png" alt="BeEF XSS Logo" />
+    <h6> Photo taken from official BeEF-XSS website: <a href=https://beefproject.com>here</a></h6>
+    <p> BeEF is a tool that generates a link that you can send to someone and gain complete access to their web browser and implement Metasploit.</p>
+    <hr>
+    <h5> Chapter One: Installing BeEF</h5>
+    <p> To install from your OS's package manager, know that the package is called beef-xss. To install from git, type 'git clone https://github.com/beefproject/beef.git'</p>
+    <h5> Chapter Two: Using BeEF</h5>
+    <p> You can just type 'sudo beef-xss' and BeEF will be started on your machine. To send it to somebody on your network, you need to know your IP address. You can get this by typing 'sudo ifconfig' This should return your IP address on the second line, right after 'inet' and before 'netmask'. To get to the login page, go to this address: '(Your IP):3000/ui/panel'. The username + password are both beef, and the hook url (the url that you send to your victim) is:'(Your IP):3000/demos/butcher/index.html'.<br>
+      <br>To start BeEF with the github package, type 'cd beef', and then type these five commands:<br>
+      sudo apt-get install ruby<br>
+      ./install<br>
+      ./update-beef<br>
+      gem install bundle<br>
+      bundle install<br>
+      But first, we need to change the default username and password by typing 'vim config.yaml', then scrolling down and typing 'i', which allows you to edit, then deleting the default credentials and changing them. When you are finished, type ":wq". This leaves and saves the file. Finally, you can start BeEF by typing './beef'. You will know what to do from there.
+    </p>
+    <p> Thats how to use BeEF!</p>
+    <hr>
+    <p> Some other websites that are amazing for hacking are:<br>
+      -Null Byte (<a class=small_weblink href=https://null-byte.wonderhowto.com/ >here</a>)<br>
+      -Prophet Hacker (<a class=small_weblink href=https://www.prophethacker.com/ >here</a>)<br>
+      -Cybrary (<a class=small_weblink href=https://www.cybrary.it/ >here</a>)<br>
+      -Offensive Security (<a class=small_weblink href=https://www.offensive-security.com/ >here</a>)<br>
+      -Null Byte YouTube Channel (<a class=small_weblink href=https://www.youtube.com/c/NullByteWHT >here</a>)</p>
+  </body>
+</html>

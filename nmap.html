@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <a href="index.html"> Go Back to Home Page</a><br>
+    <a href="beef.html"> BeEF Tutorial</a> <br>
+    <a href=medusa.html>Medusa Tutorial</a><br>
+    <a href=nmap.html> Nmap Tutorial</a><br>
+    <a href="proxychains.html">ProxyChains Tutorial</a>
+    <p class=alert> !!!USING THESE TOOLS WITHOUT PERMISSION IS ILLEGAL. IF YOU USE THEM, YOU CAN BE SENT TO JAIL IF YOU ARE CAUGHT!!! </p>
+    <h3> Nmap: </h3>
+    <img src="nmap.png" alt="Nmap logo" style="width:250px;height:150px;"/>
+    <h6> Photo taken from Linux Adictos: <a href=https://www.linuxadictos.com/en/The-new-version-of-nmap-7-80-arrives-and-these-are-its-most-important-changes.html/ > Here</a></h6>
+    <p> Nmap is a vulnerability scanner that scans all the open ports at particular IP address.</p>
+    <hr>
+    <h5>Chapter One: Installing NMAP</h5>
+    <p> Installing NMAP is just like installing ProxyChains and Medusa. You use your OS's package manager to install it. The command for Debian/Debian-Based systems to install NMAP is 'sudo apt-get install nmap'.</p>
+    <h5> Chapter Two: Using NMAP</h5>
+    <p> Using NMAP is actually extremely easy, but in some places, illegal. The syntax for NMAP is: nmap [ &lt;Scan Type&gt; ...] [ &lt;Options&gt; ] { &lt;target specification&gt; }
+    </p>
+    <p> First, we need to know our targets' IP address. If it is a web target, we use the 'dig (website url, just without the http:// part)' command. For example: 'dig google.com', and the IP will be shown in the answer section.</p>
+    <img src="nmap-dig.png" alt="Dig Results for google.com" style='width:375px;height:295px;'/>
+    <p> Now that we have our target IP address, we can start using our scan type.</p>
+    <p> Some examples are:<br>
+    -sS:	TCP syn port scan<br>
+    -sT:  TCP connect port scan<br>
+    –sU:	UDP port scan<br>
+    –sA:	TCP ack port scan<br>
+    -Pn:	only port scan<br>
+    -sn:	only host discover<br>
+    -PR:	arp discovery on a local network<br>
+    -n:	disable DNS resolution<br>
+    -p-:	scan all ports<br>
+    -F:	fast port scan<br>
+    -p:	specify a port or port range</p>
+    <p> (These examples are taken from https://edureka.co/blog/nmap-tutorial/#scan-types)</p>
+    <p> With this information, you can start using NMAP! Some examples for full-fledged scans are: <br>
+      nmap -p 1-30 192.168.1.1<br>
+      nmap -p- 192.168.1.1<br>
+      nmap -F 192.168.1.1<br>
+      nmap -sS 192.168.1.1<br>
+      nmap -sT 192.168.1.1<br>
+      nmap –sU 192.168.1.1
+    </p>
+    <p> (These examples are taken from https://edureka.co/blog/nmap-tutorial/#scan-types)</p>
+    <p> Thats how to use NMAP!</p>
+    <hr>
+    <p> Some other websites that are amazing for hacking are:<br>
+      -Null Byte (<a class=small_weblink href=https://null-byte.wonderhowto.com/ >here</a>)<br>
+      -Prophet Hacker (<a class=small_weblink href=https://www.prophethacker.com/ >here</a>)<br>
+      -Cybrary (<a class=small_weblink href=https://www.cybrary.it/ >here</a>)<br>
+      -Offensive Security (<a class=small_weblink href=https://www.offensive-security.com/ >here</a>)<br>
+      -Null Byte YouTube Channel (<a class=small_weblink href=https://www.youtube.com/c/NullByteWHT >here</a>)</p>
+  </body>
+</html>

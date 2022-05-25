@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <a href="index.html"> Go Back to Home Page</a><br>
+    <a href="beef.html"> BeEF Tutorial</a> <br>
+    <a href=medusa.html>Medusa Tutorial</a><br>
+    <a href=nmap.html> Nmap Tutorial</a><br>
+    <a href="proxychains.html">ProxyChains Tutorial</a>
+    <p class=alert> !!!USING THESE TOOLS WITHOUT PERMISSION IS ILLEGAL (except for proxychains). IF YOU USE THEM FOR MALICIOUS INTENT, YOU CAN BE SENT TO JAIL IF YOU ARE CAUGHT!!! </p>
+    <h3> ProxyChains photo: </h3>
+    <img src="proxychains.png" alt="Proxies being added to proxychains config file." style="width:250px;height:200px;"/>
+    <h6> Photo taken from Linux Hint: <a href=https://linuxhint.com/wp-content/uploads/2017/11/proxychainproxylist.png> Here</a></h6> 
+    <p> ProxyChains allows you to use proxy servers to hide your IP address.</p>
+    <hr>
+    <h4> Lets Start!</h4>
+    <h5> Chapter One: Installing ProxyChains</h5>
+    <p>To install Proxychains via your package manager, type: "sudo [OS package installer] proxychains" You may be prompted with a password, which you need to do so, and they may ask for a 'y' or 'n', aka yes or no, which you respond y. ProxyChains will now be installed on your machine.</p>
+    <br>
+    <h5>Chapter Two: Editing the Config file.</h5>
+    <br>
+    <p> To edit the config file, you need a text editor. In this case, we will use Nano. To download nano, do the command we used to install proxychains, but replace 'proxychains' with Nano. <br>
+      This next step is very important.</p>
+    <p>You need to access the config file by typing "sudo nano /etc/proxychains.conf". This may require a password, so either enter the default root password (it depends on your operating system)</p>
+    <p> This should bring you to the config file. On the 10th line, you should see "#dynamic_chain". Delete the '#' from it. Next, on the 18th line, you should see "strict_chain". Add a '#' to the beginning. Your config file should look like this: </p>
+    <img src="proxychains-config.png" alt="Proxychains Example of Config file" style="width:650px;height:500px;" />
+    <p> If it doesn't, fix it. The next step is to comment out the final line, which says "socks4 
+    127.0.0.1 9050". 127.0.0.1 is localhost, and 9050 is the port. We don't need it, which is why we add a hashtag at the beginning. This makes it so proxychains ignores it, just like strict chains.</p>
+    <br>
+    <h5> Chapter Three: Hooking proxy servers up to proxychains.</h5>
+    <p> We will be using proxies from a website called spys.one. The website is in russian, so you need to translate it, unless you can speak i. There are 4 types of proxies. SOCKS5, SOCKS4, and HTTP. SOCKS5 is better than SOCKS4, so our targets are SOCKS5 and HTTP. For example, this proxy is 91.134.139.238:3080, and it is SOCKS5. To get this proxy running in our terminal, we need to type "socks5   91.134.139.238 3080" If we needed a username + password, we would press tab, then type the username, same with the password. <br><br>Not all proxies may work, so you will have to experiment.</p>
+    <p><br>Thats how you use proxychains!</p>
+    <hr>
+    <p> Some other websites that are amazing for hacking are:<br>
+    -Null Byte (<a class=small_weblink href=https://null-byte.wonderhowto.com/ >here</a>)<br>
+    -Prophet Hacker (<a class=small_weblink href=https://www.prophethacker.com/ >here</a>)<br>
+    -Cybrary (<a class=small_weblink href=https://www.cybrary.it/ >here</a>)<br>
+    -Offensive Security (<a class=small_weblink href=https://www.offensive-security.com/ >here</a>)<br>
+      -Null Byte YouTube Channel (<a class=small_weblink href=https://www.youtube.com/c/NullByteWHT >here</a>)</p>
+  </body>
+</html>

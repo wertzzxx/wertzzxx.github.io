@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <a href="index.html"> Go Back to Home Page</a><br>
+    <a href="beef.html"> BeEF Tutorial</a> <br>
+    <a href=medusa.html>Medusa Tutorial</a><br>
+    <a href=nmap.html> Nmap Tutorial</a><br>
+    <a href="proxychains.html">ProxyChains Tutorial</a>
+    <p class=alert> !!!USING THESE TOOLS WITHOUT PERMISSION IS ILLEGAL. IF YOU USE THEM, YOU CAN BE SENT TO JAIL IF YOU ARE CAUGHT!!! </p>
+    <h2> Medusa: </h2>
+    <img src="medusa.jpeg" alt="Medusa being run in a Terminal Emulator" />
+    <h6> Photo taken from Geeks for Geeks: <a href=https://www.geeksforgeeks.org/password-cracking-with-medusa-in-linux/ > Here</a> </h6>
+    <p> Medusa is a password cracking tool that is used for Dictionary attacks.</p>
+    <hr>
+    <h4> Lets start!</h4>
+    <h5> Chapter One: Installing Medusa</h5>
+    <p> To install Medusa, you need to use your OS application manager. (apt, pacman, etc.)
+      For example: 'sudo apt-get install medusa' for Debian/Debian-based users.</p>
+    <p>Medusa should be installed, but you should always check. To make sure that Medusa is installed on your machine, type 'medusa' in your terminal. It should return instructions for how to use it.</p>
+    <h5>Chapter Two: Using Medusa</h5>
+    <p> Using Medusa is pretty simple, but it can be pretty daunting with all of the instructions needed.</p>
+    <p> You can either A, read all the instructions that it gives you, or B, just learn through this chapter.</p>
+    <p> First, you need to know your target. You need to get the host IP address from the target. You can figure this out by typing this in your terminal: 'dig (target website)' Replace target website with website url, just without 'http(s)://'. The IP address should be returned in the 'Answer Section'. </p>
+    <p> Second, you need to get a password file that contains all the possible passwords a user can have, or you can just type the passwords out instead of having a file containing them. My recommendation is rockyou.txt if you don't have any specific password files. You can download it from this link: <a href=https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt> Here</a>. You also need to have a username.</p>
+    <p> Lastly, we need to put all of the information together in tags. The tags that we need to know are: <p>
+    <ol>
+      <li class=list> -h: the host IP</li>
+      <li class=list> -u: username</li>
+      <li class=list> -p: single password</li>
+      <li class=list> -P: password file </li>
+      <li class=list> -M: module </li>
+      <li class=list> -n: port number</li>
+    </ol>
+    <p>Some hosts may use false positives, so you will get an incorrect password. Or, they will disable less secure applications to attempt to sign in.</p>
+    <p> Some other websites that are amazing for hacking are:<br>
+      -Null Byte (<a class=small_weblink href=https://null-byte.wonderhowto.com/ >here</a>)<br>
+      -Prophet Hacker (<a class=small_weblink href=https://www.prophethacker.com/ >here</a>)<br>
+      -Cybrary (<a class=small_weblink href=https://www.cybrary.it/ >here</a>)<br>
+      -Offensive Security (<a class=small_weblink href=https://www.offensive-security.com/ >here</a>)<br>
+      -Null Byte YouTube Channel (<a class=small_weblink href=https://www.youtube.com/c/NullByteWHT >here</a>)</p>
+  </body>
+</html>
