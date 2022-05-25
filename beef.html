@@ -20,7 +20,7 @@
     <h5> Chapter Two: Using BeEF</h5>
     <p> You can just type 'sudo beef-xss' and BeEF will be started on your machine. To send it to somebody on your network, you need to know your IP address. You can get this by typing 'sudo ifconfig' This should return your IP address on the second line, right after 'inet' and before 'netmask'. To get to the login page, go to this address: '(Your IP):3000/ui/panel'. The username + password are both beef, and the hook url (the url that you send to your victim) is:'(Your IP):3000/demos/butcher/index.html'.<br>
       <br>To start BeEF with the github package, type 'cd beef', and then type these five commands:<br>
-      sudo apt-get install ruby<br>
+      sudo (OS package manager installation method, for Debian its apt-get install) ruby<br>
       ./install<br>
       ./update-beef<br>
       gem install bundle<br>
